@@ -8,19 +8,14 @@
         "distDir": "dist/client"
       }
     },
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+        "src": "api/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "runtime": "nodejs20.x",
+        "includeFiles": "dist/server/**"
+      }
     }
   ],
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs20.x",
-      "includeFiles": [
-        "dist/server/**"
-      ]
-    }
-  },
   "routes": [
     {
       "src": "/api/health",
