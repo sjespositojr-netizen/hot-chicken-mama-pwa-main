@@ -10,15 +10,22 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "dist/server/**"
-        ]
-      }
+      "use": "@vercel/node"
     }
   ],
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs20.x",
+      "includeFiles": [
+        "dist/server/**"
+      ]
+    }
+  },
   "routes": [
+    {
+      "src": "/api/health",
+      "dest": "/api/health.js"
+    },
     {
       "handle": "filesystem"
     },
