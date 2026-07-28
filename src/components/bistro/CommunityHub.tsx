@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import { Instagram } from "lucide-react";
 import { RESTAURANT } from "@/data/menu";
 
 export function CommunityHub() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <section id="social" className="mx-auto mt-10 max-w-xl px-5">
       <div className="flex items-end justify-between">
@@ -16,17 +24,18 @@ export function CommunityHub() {
           <Instagram size={18} />
         </a>
       </div>
-      <div className="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-dashed border-white/15 bg-card/40 p-4">
-        {/* SOCIAL_EMBED_PLACEHOLDER */}
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="aspect-square rounded-lg bg-gradient-to-br from-white/5 to-white/[0.02]"
+      
+      {/* Outer container keeps overflow-hidden to crop anything that spills out */}
+      <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-card/40 px-2 pt-2 shadow-lg">
+        
+        {/* Inner wrapper with negative bottom margin to hide the badge */}
+        <div className="-mb-14"> 
+          <div 
+            className="elfsight-app-5363f10a-1ddd-4761-8e8f-5157a70e6e9d" 
+            data-elfsight-app-lazy 
           />
-        ))}
-        <p className="col-span-3 mt-2 text-center text-xs text-muted-foreground">
-          Connect your live feed widget here.
-        </p>
+        </div>
+
       </div>
     </section>
   );
