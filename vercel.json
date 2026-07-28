@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -10,13 +10,15 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "runtime": "nodejs20.x",
-        "includeFiles": "dist/server/**"
-      }
+      "use": "@vercel/node"
     }
   ],
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs20.x",
+      "includeFiles": "dist/server/**"
+    }
+  },
   "routes": [
     {
       "src": "/api/health",
