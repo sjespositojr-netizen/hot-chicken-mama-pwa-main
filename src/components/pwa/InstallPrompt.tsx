@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 
+const APP_NAME = "Hot Chicken Mama";
+
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{
@@ -81,7 +83,7 @@ export function InstallPrompt() {
       return (
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-foreground">Install AlphaBistro</p>
+            <p className="text-sm font-semibold text-foreground">Install {APP_NAME}</p>
             <p className="mt-1 text-xs text-muted-foreground">
               Add the app to your home screen for faster access.
             </p>
