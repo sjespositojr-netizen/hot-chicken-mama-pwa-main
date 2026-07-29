@@ -48,7 +48,7 @@ export function TopOrderBar() {
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       <div className="mx-auto flex max-w-xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center">
-        <div className="flex min-w-0 items-center gap-3 sm:max-w-[28%]">
+        <div className="flex min-w-0 items-center gap-3 sm:basis-[30%] sm:max-w-[30%]">
           <span
             className={`relative inline-flex h-3.5 w-3.5 flex-none rounded-full ${
               isOpen
@@ -72,7 +72,7 @@ export function TopOrderBar() {
           href={RESTAURANT.orderUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex min-w-0 flex-1 items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300 active:scale-[0.98] ${
+          className={`flex min-w-0 flex-1 w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300 active:scale-[0.98] ${
             isOpen
               ? "bg-primary text-primary-foreground shadow-[0_0_20px_rgba(227,28,35,0.5)] hover:shadow-[0_0_30px_rgba(227,28,35,0.8)]"
               : "bg-slate-600 text-white shadow-[0_2px_12px_rgba(15,23,42,0.35)] hover:bg-slate-500"
