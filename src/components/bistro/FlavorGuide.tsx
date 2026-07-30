@@ -21,7 +21,7 @@ export function FlavorGuide() {
             Nashville Hot, New York Loud ‼️
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Drawing our inspiration from the innovators, Hot Chicken Mama takes what makes Nasville-Style Chicken special and turns it up to <b>"Loud!"</b><br /><br />With 5 distinct heat levels, and our unique, chef-driven Sandwich, Snack Wrap and Hot Dog styles, we've got just the something for everyone. <br /><br />Nashville Roots, New York Hot Chicken: That's Hot Chicken Mama 🐓<br />
+            Drawing our inspiration from the innovators, Hot Chicken Mama takes what makes Nashville-Style Chicken special and turns it up to <b>"Loud!"</b><br /><br />With 5 distinct heat levels, and our unique, chef-driven Sandwich, Snack Wrap and Hot Dog styles, we've got just the something for everyone. <br /><br />Nashville Roots, New York Hot Chicken: That's Hot Chicken Mama 🐓<br />
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {[
