@@ -14,10 +14,10 @@ export function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/25 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-5">
-          <h2 className="text-2xl font-bold leading-tight text-foreground">The Squawk of the Town!
+          <h2 className="text-2xl font-bold leading-tight text-foreground">Hot Chicken Mama | Blue Point, NY
 </h2>
           <p className="mt-1 text-sm text-muted-foreground"><a 
-  href="https://www.hotchickenmama.com/" 
+  href="https://www.hotchickenmama.com/?utm_source=pwa_app&utm_medium=button&utm_campaign=website" 
   target="_blank" 
   rel="noopener noreferrer" 
   className="underline text-amber-500 font-semibold hover:text-amber-400"

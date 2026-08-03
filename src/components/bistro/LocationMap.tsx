@@ -1,6 +1,6 @@
 export default function LocationMap() {
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.765951467987!2d-73.0287206!3d40.76331165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e849931d70a229%3A0xdf4a96e3ca802bb4!2sHot%20Chicken%20Mama!5e0!3m2!1sen!2sus!4v1785085024315!5m2!1sen!2sus";
-  const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Hot+Chicken+Mama";
+  const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Hot+Chicken+Mama?utm_source=pwa_app&utm_medium=button&utm_campaign=directions";
   const today = new Date().getDay();
   const hoursList = [
     {

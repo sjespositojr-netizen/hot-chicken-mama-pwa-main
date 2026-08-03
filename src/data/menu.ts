@@ -14,9 +14,9 @@ export type MenuCategory = {
 };
 
 export const siteConfig = {
-  TOAST_URL: "https://order.toasttab.com/online/hotchickenmama",
-  toast_loyalty_url: "https://www.toasttab.com/hotchickenmama/rewardsSignup",
-  toast_rewards_lookup_url: "https://www.toasttab.com/hotchickenmama/rewards",
+  TOAST_URL: "https://order.toasttab.com/online/hotchickenmama?utm_source=pwa_app&utm_medium=button&utm_campaign=order_online",
+  toast_loyalty_url: "https://www.toasttab.com/hotchickenmama/rewardsSignup?utm_source=pwa_app&utm_medium=button&utm_campaign=join_rewards",
+  toast_rewards_lookup_url: "https://www.toasttab.com/hotchickenmama/rewards?utm_source=pwa_app&utm_medium=button&utm_campaign=check_rewards",
 };
 
 // Backwards-compatible aliases used throughout the app.
@@ -35,15 +35,15 @@ export const FEATURED: FeaturedItem[] = [
     image: "/photos/nashville-sando.jpg",
     orderUrl: TOAST_URL,
     tag: "Most Popular",
-    description: "The classic Nashville style you know and love. Purple Slaw, Pickles and our house Comeback Sauce. Choose your heat.",
+    description: "The classic Nashville style you know and love. Purple Slaw, Pickles and our house Comeback Sauce. Choose your heat!",
   },
   {
-    name: "Pimento & Pickled Pepper Sando",
+    name: "Lemon Pepper Sando",
     price: "$12",
-    image: "/photos/pimento-sando.jpg",
+    image: "/photos/lp-sando.jpg",
     orderUrl: TOAST_URL,
     tag: "Limited Time!",
-    description: "Pimento Cheese, Pickled Peppers, Hot Honey. Choose your heat. Get it while it lasts!",
+    description: "Lemon Pepper spiced, with a creamy buttermilk sauce and Purple Slaw. Choose your heat!",
   },
   {
     name: "Honey Ranch Snack Wrap",
@@ -73,5 +73,5 @@ export const RESTAURANT = {
   orderUrl: TOAST_URL,
   loyaltyUrl: siteConfig.toast_loyalty_url,
   rewardsLookupUrl: siteConfig.toast_rewards_lookup_url,
-  instagramUrl: "https://www.instagram.com/hotchickenmama/",
+  instagramUrl: "https://www.instagram.com/hotchickenmama/?utm_source=pwa_app&utm_medium=button&utm_campaign=instagram",
 };

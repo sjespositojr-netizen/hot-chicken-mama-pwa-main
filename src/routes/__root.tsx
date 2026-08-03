@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -105,8 +106,25 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <HeadContent />
-      </head>
+  <HeadContent />
+  <link rel="stylesheet" href={appCss} />
+
+  {/* Google Analytics (gtag.js) */}
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-DR5V45Y90S"
+  />
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DR5V45Y90S');
+      `,
+    }}
+  />
+</head>
       <body className="bg-background text-foreground antialiased" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
         {children}
         <Scripts />
@@ -127,6 +145,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <InstallPrompt />
+      <Analytics />
     </QueryClientProvider>
   );
 }
